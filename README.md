@@ -1,3 +1,16 @@
+# GomokuNarabe-gemini-mcp
+
+## アプリケーション概要
+
+このプロジェクトは、ReactとTypeScriptで開発された五目並べゲームです。
+ブラウザ上で手軽に五目並べを楽しむことができます。
+
+## 公開URL
+
+[https://ma-mamama.github.io/GomokuNarabe-gemini-mcp/](https://ma-mamama.github.io/GomokuNarabe-gemini-mcp/)
+
+---
+
 # GomokuNarabe-gemini-mcp プロジェクト情報
 
 このプロジェクト `GomokuNarabe-gemini-mcp` は、**Gemini CLI** を使用して開始および管理されました。
@@ -57,6 +70,8 @@ issuesに、碁盤の大きさ変更を可能にする機能追加をするチ�
 default_api.create_issue(owner="ma-mamama", repo="GomokuNarabe-gemini-mcp", title="碁盤の大きさ変更を可能にする機能追加", body="ユーザーが碁盤のサイズ（例: 9x9, 13x13, 15x15など）を自由に設定できるようにする機能を追加します。設定はゲーム開始前に行えるようにします。")
 ```
 
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -90,7 +105,7 @@ export default tseslint.config({
 })
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
