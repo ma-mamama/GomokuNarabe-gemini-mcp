@@ -1,3 +1,62 @@
+# GomokuNarabe-gemini-mcp プロジェクト情報
+
+このプロジェクト `GomokuNarabe-gemini-mcp` は、**Gemini CLI** を使用して開始および管理されました。
+
+## GitHub-MCP を使用した GitHub リポジトリ管理
+
+このGitHubリポジトリの初期設定とその後のプッシュは、Gemini CLI を介して **GitHub-MCP** (GitHub Management and Control Plane) を使用して実行されました。
+
+### 主なプロンプトとアクション:
+
+Gemini CLI が GitHub-MCP を使用して実行したプロンプトと対応するアクションの一部を以下に示します。
+
+#### 1. リポジトリ作成
+
+**プロンプト:**
+```
+github-mcpでこのプロジェクトのリポジトリを作成して
+```
+
+**追加のプロンプト (リポジトリ名とオーナー名について):**
+```
+リポジトリ名と、リポジトリを作成するGitHubのオーナー名（ご自身のユーザー名、または組織名）を教えていただけますか？
+```
+```
+リポジトリ名は、GomokuNarabe-gemini-mcp
+```
+```
+ma-mamama
+```
+
+**実行されたツール呼び出し (簡略化):**
+```python
+default_api.create_repository(name="GomokuNarabe-gemini-mcp", owner="ma-mamama", autoInit=True)
+```
+
+#### 2. プロジェクトの初回プッシュ
+
+**プロンプト (リポジトリ作成後):**
+```
+このgitリポジトリのままプッシュして
+```
+
+**実行されたツール呼び出し (簡略化、認証と履歴の問題解決後):**
+```python
+default_api.run_shell_command(command="cd gomoku-react && git push -u origin main --force", description="Forces the push of the local main branch to the remote main branch, overwriting remote changes.")
+```
+
+#### 3. Issue 作成
+
+**プロンプト:**
+```
+issuesに、碁盤の大きさ変更を可能にする機能追加をするチケットを作成して
+```
+
+**実行されたツール呼び出し (簡略化):**
+```python
+default_api.create_issue(owner="ma-mamama", repo="GomokuNarabe-gemini-mcp", title="碁盤の大きさ変更を可能にする機能追加", body="ユーザーが碁盤のサイズ（例: 9x9, 13x13, 15x15など）を自由に設定できるようにする機能を追加します。設定はゲーム開始前に行えるようにします。")
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
